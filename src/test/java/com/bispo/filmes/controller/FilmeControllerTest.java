@@ -22,7 +22,7 @@ import com.bispo.filmes.service.FilmeService;
 import io.restassured.http.ContentType;
 
 @WebMvcTest
-@DisplayName("Ola___________________FilmeControllerTest")
+// @DisplayName("FilmeControllerTest")
 public class FilmeControllerTest {
 
 	@Autowired
@@ -64,6 +64,7 @@ public class FilmeControllerTest {
 	
 	
 	@Test
+	@DisplayName("Must return OK when to obtain movie")
 	public void deveRetornarSucesso_QuandoObterFilme() {
 
 		Long idFilme = 1L;
@@ -93,6 +94,7 @@ public class FilmeControllerTest {
 	}
 
 	@Test
+	@DisplayName("Must return NOT FOUND when to obtain movie")
 	public void deveRetornarNaoEncontrado_QuandoObterFilme() {
 
 		Long idFilme = 5L;
@@ -111,7 +113,7 @@ public class FilmeControllerTest {
 	
 	
 	@Test
-	@DisplayName("Deve retornar BAD REQUEST quando obter filme")
+	@DisplayName("Must return BAD REQUEST when to obtain movie")
 	public void deveRetornarBadRequest_QuandoObterFilme() {
 		
 		Long idFilme = -36L;
